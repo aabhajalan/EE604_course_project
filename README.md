@@ -28,45 +28,35 @@ We evaluate three complementary architectures:
 ```
 EE604_Course_Project/
 │
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── .gitignore
+├── README.md                                   # 🔹 Main project overview and documentation
 │
-├── src/
-│   ├── train_resnext_lstm.py
-│   ├── train_meso_transformer.py
-│   ├── train_mobilenet_gru.py
-│   ├── inference/
-│   │   └── predict_video.py
-│   └── utils/
-│       ├── data_loader.py
-│       ├── metrics.py
-│       └── visualization.py
+├── src/                                        # 🧠 Core model training and experimentation scripts
+│   ├── resnext+lstm.py                         # Final ResNeXt–BiLSTM hybrid model
+│   ├── meso4+freqeuncynet+transformer.py       # MesoInception-4 + Transformer temporal attention variant
+│   ├── mobilenetv2+gru.py                      # Lightweight MobileNetV2 + GRU baseline
+│   ├── face_extractor.py                       # Face detection and alignment preprocessing
+│   ├── predict_video.py                        # Run inference on full videos
+│   └── utils/                                  # Utility functions (data loading, preprocessing, metrics, etc.)
 │
-├── app/                            # 🔹 Web interface (Streamlit)
-│   ├── app.py
-│   ├── model_loader.py
-│   └── README.md
+├── deepfake_console/                           # 🌐 Web interface (Streamlit-based frontend)
+│   ├── app.py                                  # Main Streamlit entry point
+│   ├── requirements.txt                        # Web app dependencies
+│   ├── README.md                               # Documentation for the web app
+│   │
+│   ├── model/                                  # Backend inference modules
+│   │   ├── __init__.py
+│   │   ├── deepfake2_model.py                  # Core ResNeXt-LSTM model definition
+│   │   ├── face_extractor.py                   # Face detection and cropping for uploaded videos
+│   │   └── inference.py                        # Model loading, prediction, and output formatting
+│   │
+│   └── assets/                                 # Static assets for UI backgrounds and styling
+│       ├── green_bg.jpg                        # Background for REAL prediction
+│       └── red_bg.jpg                          # Background for FAKE prediction
 │
-├── models/
-│   ├── best_resnext_lstm.pth
-│   ├── best_transformer_model.pth
-│   └── best_mobilenetv2_gru.h5
-│
-├── figures/
-│   ├── pipeline.png
-│   ├── confusion_matrix.png
-│   ├── roc_curve.png
-│   └── qualitative.png
-│
-└── report/
-    ├── Project_Report.pdf
-    ├── main.tex
-    ├── main.bib
-    └── figures/
-```
+└── report/                                     # 📄 Final course report and supplementary material
+    └── Project_Report.pdf                      # Official EE604 course project report
 
+```
 ---
 
 ## ⚙️ Installation
@@ -200,6 +190,6 @@ Below are all research works and reports referenced or used as baselines during 
 
 ---
 
-These papers collectively form the theoretical and architectural foundation for our experiments with **ResNeXt-LSTM**, **MesoInception-4 + Transformer**, and **MobileNetV2 + GRU** models, influencing decisions on spatial–temporal fusion, feature representation, and performance evaluation strategies.
+These papers collectively form the theoretical and architectural foundation for our experiments with **ResNeXt-LSTM**, **MesoInception-4 + FrequencyNet Transformer**, and **MobileNetV2 + GRU** models, influencing decisions on spatial–temporal fusion, feature representation, and performance evaluation strategies.
 
 ---
