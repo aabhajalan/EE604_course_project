@@ -166,12 +166,6 @@ All experiments were conducted on an NVIDIA T4 GPU with 15 GB VRAM using the **F
 | **Nikhil N**           | [nikhiln23@iitk.ac.in](mailto:nikhiln23@iitk.ac.in)       | 
 | **Abhinav Ghosh**      | [abhinavg24@iitk.ac.in](mailto:abhinavg24@iitk.ac.in)     | 
 
----
-
-## 🧾 License
-
-This project is released under the **MIT License**.
-See the [LICENSE](LICENSE) file for more details.
 
 ---
 
