@@ -1,6 +1,6 @@
 # 🌐 Deepfake Detection Web App — ResNeXt-LSTM Interface
 
-This folder (`/app`) contains a simple **Streamlit-based web application** for testing the **ResNeXt-LSTM deepfake detection model** developed in our course project.
+This folder (`/deepfake_console`) contains a simple **Streamlit-based web application** for testing the **ResNeXt-LSTM deepfake detection model** developed in our course project.
 
 ---
 
