@@ -44,7 +44,7 @@ If not, download or place your `.pth` file there.
 Run on bash:
 
 ```bash
-cd app
+cd model
 streamlit run app.py
 ```
 
