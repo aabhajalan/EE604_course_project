@@ -114,9 +114,9 @@ All experiments were conducted on an NVIDIA T4 GPU with 15 GB VRAM using the **F
 
 | Model                         |  Accuracy  |    AUC   | F1-Score |
 | :---------------------------- | :--------: | :------: | :------: |
-| MesoInception-4 + Transformer |   86.8 %   |   0.90   |   0.86   |
-| MobileNetV2 + GRU             |   88.4 %   |   0.91   |   0.87   |
-| **ResNeXt-LSTM (Ours)**       | **92.7 %** | **0.96** | **0.93** |
+| MesoInception-4 + Transformer |   64 %   |   0.67  |   0.67   |
+| MobileNetV2 + GRU             |   60 %   |   0.59   |   0.68   |
+| **ResNeXt-LSTM (Ours)**       | **77.41 %** | **0.86** | **0.77** |
 
 ### Example Outputs
 
