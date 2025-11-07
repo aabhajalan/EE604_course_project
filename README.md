@@ -171,6 +171,35 @@ All experiments were conducted on an NVIDIA T4 GPU with 15 GB VRAM using the **F
 
 ## 📚 References
 
-* Piotr Kawa, Piotr Syga. *A Note on Deepfake Detection with Low-Resources.* arXiv preprint arXiv:2006.05183 (2020).
-* Abhijit Jadhav et al. *Deepfake Video Detection using ResNeXt Convolutional and LSTM Networks.* GHRCEM Technical Report (2020).
-* Mark Sandler et al. *MobileNetV2: Inverted Residuals and Linear Bottlenecks.* arXiv preprint arXiv:1801.04381 (2018).
+Below are all research works and reports referenced or used as baselines during the project:
+
+1. **Piotr Kawa, Piotr Syga.**  
+   *A Note on Deepfake Detection with Low-Resources.*  
+   *arXiv preprint arXiv:2006.05183 (2020).*  
+   [https://arxiv.org/abs/2006.05183](https://arxiv.org/abs/2006.05183)
+
+2. **Abhijit Jadhav, Hitendra Patil, Jay Patel, Abhishek Patange, Manjushri Mahajan.**  
+   *Deepfake Video Detection using ResNeXt Convolutional and LSTM Networks.*  
+   *B.E. Project Report, GHRCEM Department of Computer Engineering, Pune (2020).*  
+   [https://github.com/abhijitjadhav1998/Deefake_detection_Django_app](https://github.com/abhijitjadhav1998/Deefake_detection_Django_app)
+
+3. **Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov, Liang-Chieh Chen.**  
+   *MobileNetV2: Inverted Residuals and Linear Bottlenecks.*  
+   *arXiv preprint arXiv:1801.04381 (2018).*  
+   [https://arxiv.org/abs/1801.04381](https://arxiv.org/abs/1801.04381)
+
+4. **Kyunghyun Cho, Bart van Merriënboer, Çaglar Gülçehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, Yoshua Bengio.**  
+   *Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation.*  
+   *Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1724–1734.*  
+   [https://arxiv.org/abs/1406.1078](https://arxiv.org/abs/1406.1078)
+
+5. **Md Shohel Rana, Mohammad Nur Nobi, Beddhu Murali, Andrew H. Sung.**  
+   *Deepfake Detection: A Systematic Literature Review.*  
+   *IEEE Access, Vol. 10, pp. 25494–25513, 2022.*  
+   [https://ieeexplore.ieee.org/document/9721302](https://ieeexplore.ieee.org/document/9721302)
+
+---
+
+These papers collectively form the theoretical and architectural foundation for our experiments with **ResNeXt-LSTM**, **MesoInception-4 + Transformer**, and **MobileNetV2 + GRU** models, influencing decisions on spatial–temporal fusion, feature representation, and performance evaluation strategies.
+
+---
