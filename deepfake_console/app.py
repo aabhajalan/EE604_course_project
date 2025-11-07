@@ -1,29 +1,27 @@
-import streamlit as st
-import time
-import random
-import base64
-import os
-from model.inference import analyze_video
+import streamlit as st    # for web app interface
+import time               # for using functions such as sleep and delays
+import random             # for generating random values to give a more dynamic feel in delays
+import base64             # for encoding images to base64 for background setting
+import os                 # for file path operations
+from model.inference import analyze_video  # function to analyze video and return results
 
-# ---------- PAGE CONFIG ----------
-st.set_page_config(page_title="Deepfake Detection Console", layout="centered")
+st.set_page_config(page_title="Deepfake Detection Console", layout="centered") # for title and layout
 
-# ---------- Helper: Encode image to base64 ----------
+# Encode image to base64
 def encode_image_to_base64(path: str):
     if not os.path.exists(path):
         return None
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-# ---------- Load Backgrounds ----------
+# loading background images
 GREEN_BG = "assets/green_bg.jpg"
 RED_BG = "assets/red_bg.jpg"
 green_b64 = encode_image_to_base64(GREEN_BG)
 red_b64 = encode_image_to_base64(RED_BG)
 
-# ---------- BACKGROUND SETTER ----------
+# setting up the background with fade effect
 def set_background(image_b64: str):
-    """Sets smooth fade transition background using CSS."""
     if not image_b64:
         st.markdown("<style>body { background-color: black; }</style>", unsafe_allow_html=True)
         return
@@ -51,10 +49,10 @@ def set_background(image_b64: str):
         unsafe_allow_html=True,
     )
 
-# ---------- INITIAL BACKGROUND ----------
+# setting green as initial background
 set_background(green_b64)
 
-# ---------- STYLES ----------
+# styling the interface
 st.markdown("""
 <style>
 h1, h3, h4, p {
@@ -102,15 +100,15 @@ h1, h3, h4, p {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------- HEADER ----------
-st.markdown("<h1>🕵️‍♂️ Deepfake Detection Console</h1>", unsafe_allow_html=True)
+# main heading and description
+st.markdown("<h1>Deepfake Detection Console</h1>", unsafe_allow_html=True)
 st.markdown("<p>Upload a video for authenticity analysis...</p>", unsafe_allow_html=True)
 
-# ---------- FILE UPLOAD ----------
+# creating file uploader
 uploaded_file = st.file_uploader("Upload a video", type=["mp4", "avi", "mov"], label_visibility="hidden")
 
 if uploaded_file is not None:
-    set_background(green_b64)  # Stay green until verdict
+    set_background(green_b64)  # Stay green until results
 
     result_placeholder = st.empty()
     terminal_output = "> Initializing deepfake detection system...<br>"
@@ -127,18 +125,17 @@ if uploaded_file is not None:
         "Finalizing authenticity verdict..."
     ]
 
-    # Typing effect simulation (no partial HTML rendering)
+    # Typing effect simulation with small delays
     for log in fake_logs:
         typed_line = "> "
         for ch in log:
             typed_line += ch
-            # simulate typing but don't render partial HTML
             time.sleep(0.02)
         terminal_output += typed_line + "<br>"
         result_placeholder.markdown(f"<div class='terminal'>{terminal_output}</div>", unsafe_allow_html=True)
         time.sleep(random.uniform(0.5, 0.9))
 
-    # ---------- RUN INFERENCE ----------
+    # result analysis and interface
     result = analyze_video(uploaded_file)
     result_placeholder.empty()
 
@@ -169,6 +166,7 @@ if uploaded_file is not None:
             """
 
         result_placeholder.markdown(verdict_html, unsafe_allow_html=True)
+
 
 
 
