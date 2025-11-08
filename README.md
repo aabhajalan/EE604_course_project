@@ -168,9 +168,7 @@ Below are all research works and reports referenced or used as baselines during 
    *arXiv preprint arXiv:2006.05183 (2020).*  
    [https://arxiv.org/abs/2006.05183](https://arxiv.org/abs/2006.05183)
 
-2. **Abhijit Jadhav, Hitendra Patil, Jay Patel, Abhishek Patange, Manjushri Mahajan.**  
-   *Deepfake Video Detection using ResNeXt Convolutional and LSTM Networks.*  
-   *B.E. Project Report, GHRCEM Department of Computer Engineering, Pune (2020).*  
+2. Xie, S., Girshick, R., Dollár, P., Tu, Z., & He, K. (2017). Aggregated Residual Transformations for Deep Neural Networks (ResNeXt). CVPR 2017. https://arxiv.org/abs/1611.05431
    [https://github.com/abhijitjadhav1998/Deefake_detection_Django_app](https://github.com/abhijitjadhav1998/Deefake_detection_Django_app)
 
 3. **Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov, Liang-Chieh Chen.**  
