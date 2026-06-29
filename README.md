@@ -53,8 +53,7 @@ EE604_Course_Project/
 │       ├── green_bg.jpg                        # Background for REAL prediction
 │       └── red_bg.jpg                          # Background for FAKE prediction
 │
-└── report/                                     # 📄 Final course report and supplementary material
-    └── Project_Report.pdf                      # Official EE604 course project report
+└── Project_Report.pdf                          # Official EE604 course project report
 
 ```
 ---
